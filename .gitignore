@@ -1,0 +1,34 @@
+# Build artifacts
+.buildozer/
+bin/
+dist/
+build/
+
+# IDE / editor
+.vscode/
+.idea/
+*.pyc
+__pycache__/
+*.egg-info/
+*.egg
+.DS_Store
+
+# Logs and pids
+*.log
+*.pid
+
+# OS temp files
+.DS_Store
+Thumbs.db
+*~
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Android build outputs
+*.apk
+*.aab
+*.keystore
+*.jks
