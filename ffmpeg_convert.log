@@ -1,0 +1,39 @@
+ffmpeg version 8.1.2 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Android (13989888, +pgo, +bolt, +lto, +mlgo, based on r563880c) clang version 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 5e96669f06077099aa41290cdb4c5e6fa0f59349)
+  configuration: --arch=aarch64 --as=aarch64-linux-android-clang --cc=aarch64-linux-android-clang --cxx=aarch64-linux-android-clang++ --nm=llvm-nm --ar=llvm-ar --ranlib=llvm-ranlib --pkg-config=/home/builder/.termux-build/_cache/android-r29-api-24-v4/bin/pkg-config --strip=llvm-strip --cross-prefix=aarch64-linux-android- --disable-indevs --disable-outdevs --enable-indev=lavfi --disable-static --disable-symver --enable-cross-compile --enable-gpl --enable-version3 --enable-jni --enable-lcms2 --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libdav1d --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libglslang --enable-libgme --enable-libharfbuzz --enable-libmysofa --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenmpt --enable-libopus --enable-libplacebo --enable-librav1e --enable-librubberband --enable-libsoxr --enable-libsrt --enable-libssh --enable-libsvtav1 --enable-libtheora --enable-libv4l2 --enable-libvidstab --enable-libvmaf --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-mediacodec --enable-opencl --enable-openssl --enable-shared --prefix=/data/data/com.termux/files/usr --target-os=android --extra-libs=-landroid-glob --enable-vulkan --enable-neon --disable-libfdk-aac
+  libavutil      60. 26.102 / 60. 26.102
+  libavcodec     62. 28.102 / 62. 28.102
+  libavformat    62. 12.102 / 62. 12.102
+  libavdevice    62.  3.102 / 62.  3.102
+  libavfilter    11. 14.102 / 11. 14.102
+  libswscale      9.  5.102 /  9.  5.102
+  libswresample   6.  3.102 /  6.  3.102
+Input #0, matroska,webm, from '/storage/emulated/0/Download/Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster).webm':
+  Metadata:
+    COMPATIBLE_BRANDS: iso6av01mp41
+    MAJOR_BRAND     : dash
+    MINOR_VERSION   : 0
+    ENCODER         : Lavf62.12.102
+  Duration: 00:03:33.06, start: 0.000000, bitrate: 9152 kb/s
+  Stream #0:0: Video: av1 (libdav1d) (Main), yuv420p(tv, bt709), 3840x2160 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 1k tbn (default)
+    Metadata:
+      HANDLER_NAME    : ISO Media file produced by Google Inc.
+      DURATION        : 00:03:33.040000000
+  Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp (default)
+    Metadata:
+      DURATION        : 00:03:33.061000000
+Stream mapping:
+  Stream #0:1 -> #0:0 (opus (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to '/storage/emulated/0/Download/Rick_Astley_Never_Gonna_Give_You_Up.mp3':
+  Metadata:
+    COMPATIBLE_BRANDS: iso6av01mp41
+    MAJOR_BRAND     : dash
+    MINOR_VERSION   : 0
+    TSSE            : Lavf62.12.102
+  Stream #0:0(eng): Audio: mp3, 44100 Hz, stereo, fltp, 192 kb/s (default)
+    Metadata:
+      encoder         : Lavc62.28.102 libmp3lame
+      DURATION        : 00:03:33.061000000
+size=     229KiB time=00:00:09.74 bitrate= 192.6kbits/s speed=19.5x elapsed=0:00:00.50    size=     256KiB time=00:00:20.50 bitrate= 102.3kbits/s speed=20.5x elapsed=0:00:01.00    size=     512KiB time=00:00:31.24 bitrate= 134.2kbits/s speed=20.8x elapsed=0:00:01.50    size=     768KiB time=00:00:41.82 bitrate= 150.4kbits/s speed=20.9x elapsed=0:00:02.00    size=    1024KiB time=00:00:53.36 bitrate= 157.2kbits/s speed=21.3x elapsed=0:00:02.50    size=    1536KiB time=00:01:05.62 bitrate= 191.8kbits/s speed=21.8x elapsed=0:00:03.00    size=    1536KiB time=00:01:15.28 bitrate= 167.1kbits/s speed=21.5x elapsed=0:00:03.50    size=    1792KiB time=00:01:26.04 bitrate= 170.6kbits/s speed=21.5x elapsed=0:00:04.00    size=    2304KiB time=00:01:38.61 bitrate= 191.4kbits/s speed=21.9x elapsed=0:00:04.50    size=    2304KiB time=00:01:45.03 bitrate= 179.7kbits/s speed=  21x elapsed=0:00:05.01    size=    2560KiB time=00:01:54.54 bitrate= 183.1kbits/s speed=20.8x elapsed=0:00:05.51    size=    2816KiB time=00:02:05.28 bitrate= 184.1kbits/s speed=20.8x elapsed=0:00:06.01    size=    3072KiB time=00:02:14.94 bitrate= 186.5kbits/s speed=20.7x elapsed=0:00:06.51    size=    3328KiB time=00:02:24.19 bitrate= 189.1kbits/s speed=20.6x elapsed=0:00:07.01    size=    3584KiB time=00:02:35.35 bitrate= 189.0kbits/s speed=20.7x elapsed=0:00:07.51    size=    3840KiB time=00:02:45.77 bitrate= 189.8kbits/s speed=20.7x elapsed=0:00:08.01    size=    4096KiB time=00:02:56.51 bitrate= 190.1kbits/s speed=20.7x elapsed=0:00:08.51    size=    4352KiB time=00:03:07.14 bitrate= 190.5kbits/s speed=20.7x elapsed=0:00:09.01    size=    4608KiB time=00:03:17.87 bitrate= 190.8kbits/s speed=20.8x elapsed=0:00:09.52    size=    4864KiB time=00:03:28.09 bitrate= 191.5kbits/s speed=20.8x elapsed=0:00:10.02    [out#0/mp3 @ 0xb4000072c604b7b0] video:0KiB audio:4994KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.015018%
+size=    4995KiB time=00:03:33.04 bitrate= 192.1kbits/s speed=20.7x elapsed=0:00:10.27    

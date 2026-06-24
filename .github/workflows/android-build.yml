@@ -1,0 +1,58 @@
+name: Build Android APK (Buildozer Docker)
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  android-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker (needed to run buildozer image)
+        uses: docker/setup-buildx-action@v3
+
+      - name: Cache p4a and buildozer dirs
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.buildozer
+            ./.buildozer
+            ~/.local/share/python-for-android
+          key: ${{ runner.os }}-buildozer-${{ hashFiles('**/buildozer.spec') }}
+
+      - name: Run Buildozer in official Docker image
+        run: |
+          docker run --rm \
+            -e CI=true \
+            -v "${{ github.workspace }}:/home/user/project" \
+            -v "${{ github.workspace }}/.buildozer:/home/user/.buildozer" \
+            -w /home/user/project \
+            kivy/buildozer:latest \
+            buildozer android debug
+
+      - name: Find APK(s)
+        run: |
+          echo "Looking for APK files in workspace:"
+          ls -la
+          find . -type f -name "*.apk" -print || true
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apks
+          path: |
+            **/*.apk
+
+      - name: Upload buildozer logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: ./.buildozer
