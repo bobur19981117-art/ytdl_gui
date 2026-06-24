@@ -36,7 +36,7 @@ jobs:
             -v "${{ github.workspace }}/.buildozer:/home/user/.buildozer" \
             -w /home/user/project \
             kivy/buildozer:latest \
-            android debug
+            buildozer android debug
 
       - name: Find APK(s)
         run: |
