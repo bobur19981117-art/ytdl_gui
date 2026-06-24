@@ -19,7 +19,7 @@ orientation = portrait
 android.api = 33
 
 # (str) Android NDK version to use
-#android.ndk = 25b
+android.ndk = 25b
 
 # (str) Android entrypoint, default is org.kivy.android.PythonActivity
 #android.entrypoint = org.kivy.android.PythonActivity
